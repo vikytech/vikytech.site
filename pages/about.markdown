@@ -4,10 +4,17 @@ title: About
 permalink: about
 ---
 
-<h1 align="center">Hey there 👋🏻, I'm Vikhyath</h1>
-<h3 align="center">{ FullStack Developer | Consultant }</h3>
-
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=vikytech&label=Profile%20views&color=0e75b6&style=flat" alt="vikytech" /> </p>
+<h1 align="center">Hey there 👋🏻, I'm Vikhyath</h1>
+<h3 align="center">$ { Full-Stack Developer | Consultant }</h3>
+
+
+I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia) as a [STEP](https://www.thoughtworks.com/STEP) intern, post the internship I joined here as a Full time Employee.
+
+> Since then I have explored in domains like Banking, Retail and Health Care spanning across Mobile, Web and Data Platforms. Worked in Java, R, Android with some smaller contributions in C, Golang etc. Apart from Application development, have also pursued skills in Mobile - apps & DevOps.
+
+| `Apart from the usual work, I also like to spend my time in contributing back to the society in means of OSS and mentoring tech sessions for tech enthusiastic geeks out there!!`
+
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vikytech" alt="vikytech" /></a> </p>
 
