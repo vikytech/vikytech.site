@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-06-20T17:10:38+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learings in form of blogs.</subtitle><entry><title type="html">Welcome Page!</title><link href="https://vikytech.site/categories/2021/06/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome Page!" /><published>2021-06-20T07:50:20+05:30</published><updated>2021-06-20T07:50:20+05:30</updated><id>https://vikytech.site/categories/2021/06/20/welcome-to-jekyll</id><content type="html" xml:base="https://vikytech.site/categories/2021/06/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-06-20T20:29:44+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">Welcome Page!</title><link href="https://vikytech.site/categories/2021/06/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome Page!" /><published>2021-06-20T07:50:20+05:30</published><updated>2021-06-20T07:50:20+05:30</updated><id>https://vikytech.site/categories/2021/06/20/welcome-to-jekyll</id><content type="html" xml:base="https://vikytech.site/categories/2021/06/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -14,4 +14,161 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="categories" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Vikhyath Choradia</name></author><category term="categories" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Mutation Testing</title><link href="https://vikytech.site/talks,/java/2020/10/29/Mutation-Testing.html" rel="alternate" type="text/html" title="Mutation Testing" /><published>2020-10-29T07:00:00+05:30</published><updated>2020-10-29T07:00:00+05:30</updated><id>https://vikytech.site/talks,/java/2020/10/29/Mutation-Testing</id><content type="html" xml:base="https://vikytech.site/talks,/java/2020/10/29/Mutation-Testing.html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nTTp8c1C8jA&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/3875111/116968161-900f5b80-acd1-11eb-93b0-ef9d12aa4826.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-mutation-testing&quot;&gt;What is Mutation testing&lt;/h1&gt;
+
+&lt;p&gt;Mutation testing (or mutation analysis or program mutation) is used to design new software tests and evaluate the quality of existing software tests.
+Each mutated version is called a mutant and tests detect and reject mutants by causing the behavior of the original version to differ from the mutant.&lt;/p&gt;
+
+&lt;h2 id=&quot;things-to-consider&quot;&gt;Things to consider&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Limit the mutation operators used&lt;/li&gt;
+  &lt;li&gt;Limit the number of mutations per class&lt;/li&gt;
+  &lt;li&gt;Tweak the number of threads&lt;/li&gt;
+  &lt;li&gt;Target only specific portions of your codebase&lt;/li&gt;
+  &lt;li&gt;Don’t run this with every commit as it takes time to run these test….may be as smoke test&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#gradle&quot;&gt;Gradle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#intellij-plugin&quot;&gt;Intellij Plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#command-line&quot;&gt;CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gradle&quot;&gt;Gradle&lt;/h3&gt;
+
+&lt;p&gt;Add Pitest plugin to gradle&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id 'info.solidsoft.pitest' version '1.5.2'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create pitest task with your needed configuration&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pitest {
+    testSourceSets.set([sourceSets.test])
+    mainSourceSets.set([sourceSets.main])
+    junit5PluginVersion = '0.12'
+    outputFormats = ['HTML'] // XML is also available
+    mutators = [&quot;ROR&quot;, &quot;RETURN_VALS&quot;, &quot;INVERT_NEGS&quot;, &quot;MATH&quot;, &quot;VOID_METHOD_CALLS&quot;, &quot;NON_VOID_METHOD_CALLS&quot;]
+    avoidCallsTo = [&quot;java.util&quot;, &quot;java.lang&quot;]
+    threads = 4
+    timestampedReports = false
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bind the created task with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build&lt;/code&gt; task as required&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;test {
+    finalizedBy 'pitest'
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;intellij-plugin&quot;&gt;Intellij Plugin&lt;/h3&gt;
+
+&lt;p&gt;Intellij idea → Preferences → Plugins → search “&lt;a href=&quot;https://plugins.jetbrains.com/plugin/7119-pit-mutation-testing-idea-plugin/&quot;&gt;PIT mutation testing Idea plugin&lt;/a&gt;”&lt;/p&gt;
+
+&lt;h4 id=&quot;extra-params-passed-to-plugin&quot;&gt;Extra Params passed to plugin:&lt;/h4&gt;
+
+&lt;p&gt;Edit configuration for Pitest Runner and add the needed parameters from below&lt;/p&gt;
+
+&lt;h4 id=&quot;target-classes&quot;&gt;Target Classes:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Flag: --targetClasses
+    Possible Values: PackagePath
+
+    Eg: `--targetClasses com.foo.service.auth*,com.foo.service.product.service.*`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;source-directory&quot;&gt;Source Directory:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Flag: --sourceDirs
+    Possible Value: Package ROOT Path
+
+    Eg: `--sourceDirs &amp;lt;PATH_TO_BASE_DIR&amp;gt;/service/src/main`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;output-formats&quot;&gt;Output Formats:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;List of formats in which to write mutation results as the mutations are analysed. Supported formats are HTML, XML, CSV.
+
+    Flag: --outputFormats
+    Possible Values: XML,HTML
+
+    Eg: `--outputFormats XML,HTML`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;exclude-unit-tests&quot;&gt;Exclude Unit Tests:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Flag: --excludedClasses
+    Possible Values: REGEX/FileName
+Eg: `--excludedClasses *Test`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;exclude-integration-tests&quot;&gt;Exclude Integration Tests:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Flag: --excludedTestClasses
+    Possible Values: REGEX/FileName
+
+    Eg: `--excludedTestClasses *IntegrationTests,*IntegrationTest`
+
+    PIT filters are matched against the class names in the compiled binary, not against the source file name.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;exclude-annotators&quot;&gt;Exclude annotators:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flag: --excludedMethods
+Possible Values: annotator names
+
+Eg: `--excludedMethods toString,hashCode,equals`
+
+    Excluded methods are used to avoid creating mutants within methods that match the supplied list of names.
+
+PIT test will not consider spring annotator like @Service, @Api, @RestController whereas it mutates other value based spring annotations like @Value and also java annotations like @ToString,@EqualsAndHashCode
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;customize-mutators&quot;&gt;Customize mutator(s):&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flag: --mutators
+Possible Values: Mutator type
+
+Eg: `--mutators ROR,RETURN_VALS`
+
+List of Mutators recommended
+    ROR
+    RETURN_VALS
+    INVERT_NEGS
+    MATH
+    VOID_METHOD_CALLS
+    NON_VOID_METHOD_CALLS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If we need to use other mutators, vist &lt;a href=&quot;https://pitest.org/quickstart/mutators&quot;&gt;official page&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;verbose&quot;&gt;Verbose:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flag: --verbose
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;command-line&quot;&gt;Command Line&lt;/h2&gt;
+
+&lt;p&gt;export a variable named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$CLASSPATH&lt;/code&gt; and add all the paths to the dependency jars and &lt;a href=&quot;https://github.com/hcoles/pitest/releases&quot;&gt;Pitest jars&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Pitest jars
+* pitest-x.y.z.jar
+* pitest-command-line-x.y.z.jar
+* pitest-entry-x.y.z.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Command:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -cp $CLASSPATH \
+
+org.pitest.mutationtest.commandline.MutationCoverageReport \
+
+--reportDir &amp;lt;PROJECT_PATH&amp;gt;/build/reports/pittest \
+
+--sourceDirs &amp;lt;PROJECT_PATH&amp;gt;/&amp;lt;MAIN_SRC_PATH&amp;gt; \
+
+--outputFormats XML,HTML \
+
+--mutators ROR,RETURN_VALS,INVERT_NEGS,MATH,VOID_METHOD_CALLS \
+
+--targetClasses &quot;com.foo.service.auth*,com.foo.service.product.*&quot; \
+
+--excludedClasses &quot;*Test&quot; \
+
+--excludedTestClasses &quot;*IntegrationTests,*IntegrationTest&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;note-all-the-above-documentation-tested-on-pitest-152&quot;&gt;NOTE: All the above documentation tested on Pitest-1.5.2&lt;/h4&gt;</content><author><name>Vikhyath Choradia</name></author><category term="talks," /><category term="java" /><category term="mutation-testing" /><category term="pit" /><category term="java" /><summary type="html"></summary></entry></feed>

@@ -17,6 +17,7 @@ url: "https://vikytech.site" # the base hostname & protocol for your site, e.g. 
 twitter_username: vikytech007
 github_username:  vikytech
 github: [metadata]
+author: Vikhyath Choradia
 
 # Build settings
 theme: jekyll-theme-minimal
