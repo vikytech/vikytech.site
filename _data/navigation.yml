@@ -2,8 +2,6 @@ menu:
   - name: Home
     link: /
   - name: About
-    link: /about
+    link: about
   - name: Posts
-    link: /posts
-  - name: Menu
-    link: menu
+    link: posts
