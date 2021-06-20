@@ -1,5 +1,0 @@
-##Post
-
-```
-Sample code
-```
