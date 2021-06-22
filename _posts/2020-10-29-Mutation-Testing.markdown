@@ -4,7 +4,7 @@ title:  "Mutation Testing"
 date:   2020-10-29 07:00:00 +0530
 author: Vikhyath Choradia
 categories: talks, java
-tags: ["mutation-testing", "pit", "java"]
+tags: ["#mutation-testing", "#pit", "#java"]
 ---
 
 [![Watch the video](https://user-images.githubusercontent.com/3875111/116968161-900f5b80-acd1-11eb-93b0-ef9d12aa4826.png)](https://www.youtube.com/watch?v=nTTp8c1C8jA)
@@ -31,26 +31,30 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 ### Gradle
 
 Add Pitest plugin to gradle
-```
-id 'info.solidsoft.pitest' version '1.5.2'
+```groovy
+id 'info.solidsoft.pitest' version '1.6.0'
 ```
 
 Create pitest task with your needed configuration
-```
+```groovy
 pitest {
-    testSourceSets.set([sourceSets.test])
-    mainSourceSets.set([sourceSets.main])
-    junit5PluginVersion = '0.12'
-    outputFormats = ['HTML'] // XML is also available
-    mutators = ["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"]
-    avoidCallsTo = ["java.util", "java.lang"]
-    threads = 4
-    timestampedReports = false
+    mainSourceSets.set([sourceSets.main]) // Only for individual contribution, not recommended for repo having more than 10-15 classes
+    testSourceSets.set([sourceSets.test]) // Only for individual contribution, not recommended for repo having more than 10-15 classes
+    targetClasses.set(["com.foo.*","com.bar.*"]) // Ignore if mainSourceSets & testSourceSets is specified
+    excludedClasses.set(["com.foo1.*","com.bar.IT*"])  // Ignore if mainSourceSets & testSourceSets is specified
+    junit5PluginVersion.set('0.14')
+    outputFormats.set(['HTML']) // XML is also available
+    mutators.set(["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"])
+    avoidCallsTo.set(["java.util", "java.lang"])
+    threads.set(4)
+    timestampedReports.set(false)
+    mutationThreshold.set(95)
+    coverageThreshold.set(95)
 }
 ```
 
 Bind the created task with `test`/`build` task as required
-```
+```groovy
 test {
     finalizedBy 'pitest'
 }
@@ -173,4 +177,4 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
 
 
 
-#### NOTE: All the above documentation tested on Pitest-1.5.2
+#### NOTE: All the above documentation tested on Pitest-1.6.0
