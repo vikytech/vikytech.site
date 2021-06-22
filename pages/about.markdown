@@ -18,7 +18,7 @@ I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia)
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vikytech" alt="vikytech" /></a> </p>
 
-- [📄 Know about my experiences](https://vikytech.github.io/resume)
+- [📄 Know about my experiences](https://resume.vikytech.site)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
