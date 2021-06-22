@@ -59,7 +59,7 @@
       <ul class="downloads">
     
     <li>
-      <h2>mutation-testing&lt;!DOCTYPE html&gt;
+      <h2>#mutation-testing&lt;!DOCTYPE html&gt;
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -150,26 +150,30 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 <h3 id="gradle">Gradle</h3>
 
 <p>Add Pitest plugin to gradle</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id 'info.solidsoft.pitest' version '1.5.2'
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">id</span> <span class="s1">'info.solidsoft.pitest'</span> <span class="n">version</span> <span class="s1">'1.6.0'</span>
 </code></pre></div></div>
 
 <p>Create pitest task with your needed configuration</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pitest {
-    testSourceSets.set([sourceSets.test])
-    mainSourceSets.set([sourceSets.main])
-    junit5PluginVersion = '0.12'
-    outputFormats = ['HTML'] // XML is also available
-    mutators = ["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"]
-    avoidCallsTo = ["java.util", "java.lang"]
-    threads = 4
-    timestampedReports = false
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pitest</span> <span class="o">{</span>
+    <span class="n">mainSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">testSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">test</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">targetClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo.*"</span><span class="o">,</span><span class="s2">"com.bar.*"</span><span class="o">])</span> <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">excludedClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo1.*"</span><span class="o">,</span><span class="s2">"com.bar.IT*"</span><span class="o">])</span>  <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">junit5PluginVersion</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s1">'0.14'</span><span class="o">)</span>
+    <span class="n">outputFormats</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s1">'HTML'</span><span class="o">])</span> <span class="c1">// XML is also available</span>
+    <span class="n">mutators</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"ROR"</span><span class="o">,</span> <span class="s2">"RETURN_VALS"</span><span class="o">,</span> <span class="s2">"INVERT_NEGS"</span><span class="o">,</span> <span class="s2">"MATH"</span><span class="o">,</span> <span class="s2">"VOID_METHOD_CALLS"</span><span class="o">,</span> <span class="s2">"NON_VOID_METHOD_CALLS"</span><span class="o">])</span>
+    <span class="n">avoidCallsTo</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"java.util"</span><span class="o">,</span> <span class="s2">"java.lang"</span><span class="o">])</span>
+    <span class="n">threads</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+    <span class="n">timestampedReports</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+    <span class="n">mutationThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+    <span class="n">coverageThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Bind the created task with <code class="language-plaintext highlighter-rouge">test</code>/<code class="language-plaintext highlighter-rouge">build</code> task as required</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test {
-    finalizedBy 'pitest'
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span> <span class="o">{</span>
+    <span class="n">finalizedBy</span> <span class="s1">'pitest'</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="intellij-plugin">Intellij Plugin</h3>
@@ -279,11 +283,11 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
 --excludedTestClasses "*IntegrationTests,*IntegrationTest"
 </code></pre></div></div>
 
-<h4 id="note-all-the-above-documentation-tested-on-pitest-152">NOTE: All the above documentation tested on Pitest-1.5.2</h4>
+<h4 id="note-all-the-above-documentation-tested-on-pitest-160">NOTE: All the above documentation tested on Pitest-1.6.0</h4>
 
 
 
-  <small>tags: <em>mutation-testing</em> - <em>pit</em> - <em>java</em></small>
+  <small>tags: <em>#mutation-testing</em> - <em>#pit</em> - <em>#java</em></small>
 
 
 
@@ -300,7 +304,7 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
     </li>
     
     <li>
-      <h2>pit&lt;!DOCTYPE html&gt;
+      <h2>#pit&lt;!DOCTYPE html&gt;
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -391,26 +395,30 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 <h3 id="gradle">Gradle</h3>
 
 <p>Add Pitest plugin to gradle</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id 'info.solidsoft.pitest' version '1.5.2'
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">id</span> <span class="s1">'info.solidsoft.pitest'</span> <span class="n">version</span> <span class="s1">'1.6.0'</span>
 </code></pre></div></div>
 
 <p>Create pitest task with your needed configuration</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pitest {
-    testSourceSets.set([sourceSets.test])
-    mainSourceSets.set([sourceSets.main])
-    junit5PluginVersion = '0.12'
-    outputFormats = ['HTML'] // XML is also available
-    mutators = ["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"]
-    avoidCallsTo = ["java.util", "java.lang"]
-    threads = 4
-    timestampedReports = false
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pitest</span> <span class="o">{</span>
+    <span class="n">mainSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">testSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">test</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">targetClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo.*"</span><span class="o">,</span><span class="s2">"com.bar.*"</span><span class="o">])</span> <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">excludedClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo1.*"</span><span class="o">,</span><span class="s2">"com.bar.IT*"</span><span class="o">])</span>  <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">junit5PluginVersion</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s1">'0.14'</span><span class="o">)</span>
+    <span class="n">outputFormats</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s1">'HTML'</span><span class="o">])</span> <span class="c1">// XML is also available</span>
+    <span class="n">mutators</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"ROR"</span><span class="o">,</span> <span class="s2">"RETURN_VALS"</span><span class="o">,</span> <span class="s2">"INVERT_NEGS"</span><span class="o">,</span> <span class="s2">"MATH"</span><span class="o">,</span> <span class="s2">"VOID_METHOD_CALLS"</span><span class="o">,</span> <span class="s2">"NON_VOID_METHOD_CALLS"</span><span class="o">])</span>
+    <span class="n">avoidCallsTo</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"java.util"</span><span class="o">,</span> <span class="s2">"java.lang"</span><span class="o">])</span>
+    <span class="n">threads</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+    <span class="n">timestampedReports</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+    <span class="n">mutationThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+    <span class="n">coverageThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Bind the created task with <code class="language-plaintext highlighter-rouge">test</code>/<code class="language-plaintext highlighter-rouge">build</code> task as required</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test {
-    finalizedBy 'pitest'
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span> <span class="o">{</span>
+    <span class="n">finalizedBy</span> <span class="s1">'pitest'</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="intellij-plugin">Intellij Plugin</h3>
@@ -520,11 +528,11 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
 --excludedTestClasses "*IntegrationTests,*IntegrationTest"
 </code></pre></div></div>
 
-<h4 id="note-all-the-above-documentation-tested-on-pitest-152">NOTE: All the above documentation tested on Pitest-1.5.2</h4>
+<h4 id="note-all-the-above-documentation-tested-on-pitest-160">NOTE: All the above documentation tested on Pitest-1.6.0</h4>
 
 
 
-  <small>tags: <em>mutation-testing</em> - <em>pit</em> - <em>java</em></small>
+  <small>tags: <em>#mutation-testing</em> - <em>#pit</em> - <em>#java</em></small>
 
 
 
@@ -541,7 +549,7 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
     </li>
     
     <li>
-      <h2>java&lt;!DOCTYPE html&gt;
+      <h2>#java&lt;!DOCTYPE html&gt;
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -632,26 +640,30 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 <h3 id="gradle">Gradle</h3>
 
 <p>Add Pitest plugin to gradle</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id 'info.solidsoft.pitest' version '1.5.2'
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">id</span> <span class="s1">'info.solidsoft.pitest'</span> <span class="n">version</span> <span class="s1">'1.6.0'</span>
 </code></pre></div></div>
 
 <p>Create pitest task with your needed configuration</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pitest {
-    testSourceSets.set([sourceSets.test])
-    mainSourceSets.set([sourceSets.main])
-    junit5PluginVersion = '0.12'
-    outputFormats = ['HTML'] // XML is also available
-    mutators = ["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"]
-    avoidCallsTo = ["java.util", "java.lang"]
-    threads = 4
-    timestampedReports = false
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pitest</span> <span class="o">{</span>
+    <span class="n">mainSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">testSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">test</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
+    <span class="n">targetClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo.*"</span><span class="o">,</span><span class="s2">"com.bar.*"</span><span class="o">])</span> <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">excludedClasses</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"com.foo1.*"</span><span class="o">,</span><span class="s2">"com.bar.IT*"</span><span class="o">])</span>  <span class="c1">// Ignore if mainSourceSets &amp; testSourceSets is specified</span>
+    <span class="n">junit5PluginVersion</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s1">'0.14'</span><span class="o">)</span>
+    <span class="n">outputFormats</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s1">'HTML'</span><span class="o">])</span> <span class="c1">// XML is also available</span>
+    <span class="n">mutators</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"ROR"</span><span class="o">,</span> <span class="s2">"RETURN_VALS"</span><span class="o">,</span> <span class="s2">"INVERT_NEGS"</span><span class="o">,</span> <span class="s2">"MATH"</span><span class="o">,</span> <span class="s2">"VOID_METHOD_CALLS"</span><span class="o">,</span> <span class="s2">"NON_VOID_METHOD_CALLS"</span><span class="o">])</span>
+    <span class="n">avoidCallsTo</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="s2">"java.util"</span><span class="o">,</span> <span class="s2">"java.lang"</span><span class="o">])</span>
+    <span class="n">threads</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+    <span class="n">timestampedReports</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+    <span class="n">mutationThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+    <span class="n">coverageThreshold</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">95</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Bind the created task with <code class="language-plaintext highlighter-rouge">test</code>/<code class="language-plaintext highlighter-rouge">build</code> task as required</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test {
-    finalizedBy 'pitest'
-}
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span> <span class="o">{</span>
+    <span class="n">finalizedBy</span> <span class="s1">'pitest'</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="intellij-plugin">Intellij Plugin</h3>
@@ -761,11 +773,11 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
 --excludedTestClasses "*IntegrationTests,*IntegrationTest"
 </code></pre></div></div>
 
-<h4 id="note-all-the-above-documentation-tested-on-pitest-152">NOTE: All the above documentation tested on Pitest-1.5.2</h4>
+<h4 id="note-all-the-above-documentation-tested-on-pitest-160">NOTE: All the above documentation tested on Pitest-1.6.0</h4>
 
 
 
-  <small>tags: <em>mutation-testing</em> - <em>pit</em> - <em>java</em></small>
+  <small>tags: <em>#mutation-testing</em> - <em>#pit</em> - <em>#java</em></small>
 
 
 
