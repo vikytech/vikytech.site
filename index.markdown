@@ -8,6 +8,7 @@ layout: default
 
 A blog with markdown support
 
+
 ```Java
 public static void main(String[] args) {
     VikyTech.start("Coming soon....")
