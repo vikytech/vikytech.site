@@ -25,7 +25,7 @@ plugins:
   - jekyll-feed
 sass:
     sass_dir: _sass
-    style: expanded #compressed
+    style: compressed
 
 # Theme config
 logo: /assets/img/name-logo.png
