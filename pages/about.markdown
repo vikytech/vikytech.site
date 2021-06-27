@@ -9,7 +9,7 @@ permalink: about
 <h3 align="center">$ { Full-Stack Developer | Consultant }</h3>
 
 
-I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia) as a [STEP](https://www.thoughtworks.com/STEP) intern, post the internship I joined here as a Full time Employee.
+I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia) starting as an [Intern](https://www.thoughtworks.com/STEP).
 
 > Since then I have explored in domains like Banking, Retail and Health Care spanning across Mobile, Web and Data Platforms. Worked in Java, R, Android with some smaller contributions in C, Golang etc. Apart from Application development, have also pursued skills in Mobile - apps & DevOps.
 
