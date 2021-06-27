@@ -6,8 +6,11 @@ permalink: about
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=vikytech&label=Profile%20views&color=0e75b6&style=flat" alt="vikytech" /> </p>
 <h1 align="center">Hey there 👋🏻, I'm Vikhyath</h1>
-<h3 align="center">$ { Full-Stack Developer | Consultant }</h3>
-
+<div class='console-container'>
+  <h4 align="left">$ { 
+  <span align="center" id="roles"></span>
+  <span class="blink">&#95;</span> }</h4>
+</div>
 
 I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia) starting as an [Intern](https://www.thoughtworks.com/STEP).
 
