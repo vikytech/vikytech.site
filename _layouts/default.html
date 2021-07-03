@@ -39,11 +39,11 @@
         </ul>
         {% endif %}
 
-        <ul class="downloads">
+        <div class="menu">
           {% for item in site.data.navigation.menu %}
-             <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+            <a href="{{ item.link }}"><div class="menu-item">{{ item.name }}</div></a>
           {% endfor %}
-       </ul>
+        </div>
       </header>
       <section>
 

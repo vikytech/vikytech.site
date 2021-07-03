@@ -1,0 +1,45 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        color: $black;
+        background: $white;
+        color: $white;
+        background: $black;
+    }
+
+    a {
+        color: $link_dark;
+    }
+    
+    h1 {
+        color: $white
+    }
+    
+    h2 {
+        color: $pale_white;
+    }
+    
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $half_white;
+    }
+
+    code, pre {
+        color: $code_dark;
+    }
+
+    .highlight, pre {
+        background-color: $code_bg_dark;
+    }
+
+    .menu {
+        color: $black;
+        &-item {
+            border: 1px solid $white;
+            &:hover {
+                background-color: $half_white;
+            }
+        }
+    }
+}
