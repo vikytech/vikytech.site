@@ -43,6 +43,7 @@ pitest {
     testSourceSets.set([sourceSets.test]) // Only for individual contribution, not recommended for repo having more than 10-15 classes
     targetClasses.set(["com.foo.*","com.bar.*"]) // Ignore if mainSourceSets & testSourceSets is specified
     excludedClasses.set(["com.foo1.*","com.bar.IT*"])  // Ignore if mainSourceSets & testSourceSets is specified
+    pitestVersion.set('1.6.7') // Not needed if you want to use the default version provided by plugin
     junit5PluginVersion.set('0.14')
     outputFormats.set(['HTML']) // XML is also available
     mutators.set(["ROR", "RETURN_VALS", "INVERT_NEGS", "MATH", "VOID_METHOD_CALLS", "NON_VOID_METHOD_CALLS"])
