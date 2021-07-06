@@ -4,11 +4,13 @@ title:  "Mutation Testing"
 date:   2020-10-29 07:00:00 +0530
 author: Vikhyath Choradia
 categories: ["talks", "java"]
-tags: ["#mutation-testing", "#pit", "#java"]
+tags: ["java", "mutation-testing", "pit"]
 permalink: mutation-testing
 ---
 
 [![Watch the video](https://user-images.githubusercontent.com/3875111/116968161-900f5b80-acd1-11eb-93b0-ef9d12aa4826.png)](https://www.youtube.com/watch?v=nTTp8c1C8jA)
+
+[Demo](https://github.com/vikytech/MutationTesting)
 
 # What is Mutation testing
 
@@ -177,6 +179,4 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
 --excludedTestClasses "*IntegrationTests,*IntegrationTest"
 ```
 
-
-
-#### NOTE: All the above documentation tested on Pitest-1.6.0
+#### NOTE: All the above documentation tested on Pitest-1.6.7

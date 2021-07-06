@@ -5,10 +5,8 @@ categories: tags
 permalink: tags
 ---
 
-<ul class="downloads">
-    {% for tag in site.tags %}
-    <li>
-      <h2>{{ tag }}</a></h2>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="tag-cloud">
+{% for tag in site.tags %}
+  <span><a href="{{ "/tags/" | append: tag[0] }}">{{ tag[0] | prepend: "#" }}</a></span>
+{% endfor %}
+</div>
