@@ -92,10 +92,16 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 <h3 id="gradle">Gradle</h3>
 
 <p>Add Pitest plugin to gradle</p>
+<div class="code-container">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">id</span> <span class="s1">'info.solidsoft.pitest'</span> <span class="n">version</span> <span class="s1">'1.6.0'</span>
 </code></pre></div></div>
 
 <p>Create pitest task with your needed configuration</p>
+<div class="code-container">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pitest</span> <span class="o">{</span>
     <span class="n">mainSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
     <span class="n">testSourceSets</span><span class="o">.</span><span class="na">set</span><span class="o">([</span><span class="n">sourceSets</span><span class="o">.</span><span class="na">test</span><span class="o">])</span> <span class="c1">// Only for individual contribution, not recommended for repo having more than 10-15 classes</span>
@@ -114,6 +120,9 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 </code></pre></div></div>
 
 <p>Bind the created task with <code class="language-plaintext highlighter-rouge">test</code>/<code class="language-plaintext highlighter-rouge">build</code> task as required</p>
+<div class="code-container">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span> <span class="o">{</span>
     <span class="n">finalizedBy</span> <span class="s1">'pitest'</span>
 <span class="o">}</span>
@@ -251,6 +260,7 @@ org.pitest.mutationtest.commandline.MutationCoverageReport \
     </div>
     <script src="/assets/js/scale.fix.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/copyCode.js"></script>
     
   </body>
 </html>

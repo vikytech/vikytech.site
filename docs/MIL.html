@@ -82,14 +82,18 @@ Let quickly jump to that section below.</p>
     <h3 id="define">Define</h3>
 
     <p>Go ahead and define a simple <code class="language-plaintext highlighter-rouge">procfile</code> as below in <code class="language-plaintext highlighter-rouge">root</code> folder of all your services</p>
-
-    <div class="language-yml highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>  <span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_1&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT1&gt;</span>
-  <span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_2&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT2&gt;</span>
-  <span class="s">&lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp;  &lt;COMMAND_TO_START_THE_SERVICE:PORT3&gt;</span>
-  <span class="s">&lt;FRONTEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&gt;</span>
-</code></pre></div>    </div>
   </li>
+</ul>
+
+<div class="code-container">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_1&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT1&gt;</span>
+<span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_2&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT2&gt;</span>
+<span class="s">&lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp;  &lt;COMMAND_TO_START_THE_SERVICE:PORT3&gt;</span>
+<span class="s">&lt;FRONTEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&gt;</span>
+</code></pre></div></div>
+<ul>
   <li>
     <h3 id="run">Run</h3>
     <p><code class="language-plaintext highlighter-rouge">foreman start</code></p>
@@ -123,6 +127,7 @@ Let quickly jump to that section below.</p>
     </div>
     <script src="/assets/js/scale.fix.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/copyCode.js"></script>
     
   </body>
 </html>

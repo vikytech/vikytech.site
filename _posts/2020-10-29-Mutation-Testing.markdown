@@ -34,11 +34,13 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 ### Gradle
 
 Add Pitest plugin to gradle
+{% include codeCopy.html %}
 ```groovy
 id 'info.solidsoft.pitest' version '1.6.0'
 ```
 
 Create pitest task with your needed configuration
+{% include codeCopy.html %}
 ```groovy
 pitest {
     mainSourceSets.set([sourceSets.main]) // Only for individual contribution, not recommended for repo having more than 10-15 classes
@@ -58,6 +60,7 @@ pitest {
 ```
 
 Bind the created task with `test`/`build` task as required
+{% include codeCopy.html %}
 ```groovy
 test {
     finalizedBy 'pitest'

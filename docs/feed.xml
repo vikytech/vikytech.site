@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-07-17T15:45:50+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">Micro services in Local</title><link href="https://vikytech.site/MIL" rel="alternate" type="text/html" title="Micro services in Local" /><published>2021-06-04T16:00:00+05:30</published><updated>2021-06-04T16:00:00+05:30</updated><id>https://vikytech.site/manage-multiple-microservice-in-local</id><content type="html" xml:base="https://vikytech.site/MIL">&lt;p&gt;We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-07-17T16:37:50+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">Micro services in Local</title><link href="https://vikytech.site/MIL" rel="alternate" type="text/html" title="Micro services in Local" /><published>2021-06-04T16:00:00+05:30</published><updated>2021-06-04T16:00:00+05:30</updated><id>https://vikytech.site/manage-multiple-microservice-in-local</id><content type="html" xml:base="https://vikytech.site/MIL">&lt;p&gt;We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.&lt;/p&gt;
 
 &lt;p&gt;Well as a developer I have always believed that writing automation take time but eventually saves time!!&lt;/p&gt;
 
@@ -18,13 +18,18 @@ Let quickly jump to that section below.&lt;/p&gt;
     &lt;h3 id=&quot;define&quot;&gt;Define&lt;/h3&gt;
 
     &lt;p&gt;Go ahead and define a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;procfile&lt;/code&gt; as below in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root&lt;/code&gt; folder of all your services&lt;/p&gt;
-
-    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_1&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT1&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_2&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT2&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp;  &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT3&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;lt;FRONTEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;button class=&quot;copy-code-button&quot; aria-label=&quot;Copy code to clipboard&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_1&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_2&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&amp;lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp;  &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT3&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&amp;lt;FRONTEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
   &lt;li&gt;
     &lt;h3 id=&quot;run&quot;&gt;Run&lt;/h3&gt;
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foreman start&lt;/code&gt;&lt;/p&gt;
@@ -63,10 +68,16 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 &lt;h3 id=&quot;gradle&quot;&gt;Gradle&lt;/h3&gt;
 
 &lt;p&gt;Add Pitest plugin to gradle&lt;/p&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;button class=&quot;copy-code-button&quot; aria-label=&quot;Copy code to clipboard&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'info.solidsoft.pitest'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.6.0'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create pitest task with your needed configuration&lt;/p&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;button class=&quot;copy-code-button&quot; aria-label=&quot;Copy code to clipboard&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pitest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;mainSourceSets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sourceSets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Only for individual contribution, not recommended for repo having more than 10-15 classes&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;testSourceSets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sourceSets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Only for individual contribution, not recommended for repo having more than 10-15 classes&lt;/span&gt;
@@ -85,6 +96,9 @@ Each mutated version is called a mutant and tests detect and reject mutants by c
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Bind the created task with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build&lt;/code&gt; task as required&lt;/p&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;button class=&quot;copy-code-button&quot; aria-label=&quot;Copy code to clipboard&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;finalizedBy&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pitest'&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
