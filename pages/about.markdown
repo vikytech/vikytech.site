@@ -36,3 +36,5 @@ I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia)
   <img align="left" src="https://github-readme-stats.vercel.app/api?username=vikytech&show_icons=true&locale=en&theme=gotham" alt="vikytech" width="45%"/>
   <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=vikytech&theme=gotham" alt="vikytech" width="45%"/>
  </div>
+
+ <script src="{{ "/assets/js/terminalEffect.js" | relative_url }}"></script>
