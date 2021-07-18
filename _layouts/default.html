@@ -15,6 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
+        <div class="header-wrapper">
         {% if site.logo %}
           <a href="{{ "/" | absolute_url }}">
             <img src="{{site.logo | relative_url}}" alt="Logo" />
@@ -44,6 +45,7 @@
             <a href="{{ item.link }}"><div class="menu-item">{{ item.name }}</div></a>
           {% endfor %}
         </div>
+      </div>
       </header>
       <section>
 

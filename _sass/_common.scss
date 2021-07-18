@@ -32,6 +32,33 @@ pre {
     color: $code;
 }
 
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: auto;
+}
+
+header {
+    flex: 1 1 auto;
+    .header-wrapper {
+        position: fixed;
+    }
+    position: relative;
+}
+
+section {
+    flex: 1 1 60%;
+    img {
+        max-width: 60%;
+    }
+}
+
+footer {
+    flex: 1 1 auto;
+
+}
+
 .highlight,
 pre {
     background-color: $code_bg;
@@ -97,6 +124,7 @@ pre {
     height: 200px;
     justify-content: space-around;
 }
+
 .tags {
     display: flex;
     flex-flow: row wrap;

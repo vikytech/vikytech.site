@@ -2,4 +2,23 @@
     .console-container {
         height: 100px;
     }
+
+    .wrapper {
+        flex-flow: column nowrap;
+        height: auto;
+    }
+
+    header {
+        flex: 1 1 auto;
+        .header-wrapper {
+            position: relative;
+        }
+    }
+
+    section {
+        flex: 1 1 auto;
+        img {
+            max-width: 100%;
+        }
+    }
 }
