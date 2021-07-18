@@ -66,8 +66,9 @@
 
 <p>Well as a developer I have always believed that writing automation take time but eventually saves time!!</p>
 
-<p>Now that you have read until here you are curious enough to know the solution I have in mind right!!
-Let quickly jump to that section below.</p>
+<p>Now that you have read until here you are curious enough to know the solution I have in mind right!!</p>
+
+<p>Let quickly jump to that section below.</p>
 
 <h2 id="setup">Setup</h2>
 
@@ -76,23 +77,41 @@ Let quickly jump to that section below.</p>
 <ul>
   <li>
     <h3 id="install">Install</h3>
-    <p><code class="language-plaintext highlighter-rouge">brew install foreman</code></p>
+    <ul>
+      <li>
+        <h4 id="using-homebrew">Using homebrew</h4>
+        <p><code class="language-plaintext highlighter-rouge">brew install foreman</code></p>
+      </li>
+      <li>
+        <h4 id="using-npm">Using <a href="https://www.npmjs.com/package/foreman" target="_blank" rel="noopener noreferrer">npm</a>
+</h4>
+        <p><code class="language-plaintext highlighter-rouge">npm install -g foreman</code></p>
+      </li>
+    </ul>
+
+    <p>Note: If you install via npm then replace the command <code class="language-plaintext highlighter-rouge">foreman</code> with <code class="language-plaintext highlighter-rouge">nf</code></p>
   </li>
   <li>
     <h3 id="define">Define</h3>
 
-    <p>Go ahead and define a simple <code class="language-plaintext highlighter-rouge">procfile</code> as below in <code class="language-plaintext highlighter-rouge">root</code> folder of all your services</p>
+    <p>Go ahead and define a simple <code class="language-plaintext highlighter-rouge">Procfile</code> as below in <code class="language-plaintext highlighter-rouge">root</code> folder of all your services</p>
   </li>
 </ul>
 
 <div class="code-container">
     <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
 </div>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_1&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT1&gt;</span>
-<span class="s">&lt;BACKEND_SERVICE_NAME_ON_PORT_2&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE:PORT2&gt;</span>
-<span class="s">&lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp;  &lt;COMMAND_TO_START_THE_SERVICE:PORT3&gt;</span>
-<span class="s">&lt;FRONTEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&gt;</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">&lt;BACKEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE&gt;</span>
+<span class="s">&lt;YET_ANOTHER_BACKEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp;  &lt;COMMAND_TO_START_THE_SERVICE&gt;</span>
+<span class="s">&lt;FRONTEND_SERVICE_NAME&gt;</span><span class="pi">:</span> <span class="s">cd PATH_TO_SERVICE &amp;&amp; &lt;COMMAND_TO_START_THE_SERVICE_2&gt;</span>
 </code></pre></div></div>
+
+<p><strong>Example:</strong></p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">web</span><span class="pi">:</span> <span class="s">cd webserver &amp;&amp; ./gradlew build&gt;</span>
+<span class="na">payment</span><span class="pi">:</span> <span class="s">cd payments &amp;&amp;  rails serve</span>
+<span class="na">ui</span><span class="pi">:</span> <span class="s">cd frontend &amp;&amp; npm run dev</span>
+</code></pre></div></div>
+
 <ul>
   <li>
     <h3 id="run">Run</h3>
@@ -100,7 +119,30 @@ Let quickly jump to that section below.</p>
   </li>
 </ul>
 
+<p><strong>Logs:</strong></p>
+<pre><code class="language-log">18:51:12: web.1     |  Web Server started listening on 0.0.0.0:8080
+18:51:12: payment.1 |  Payments started listening on 0.0.0.0:3000
+18:51:12: ui.1      |  node started listening on 0.0.0.0:4000
+</code></pre>
+
 <p>The setup is that simple and easy to use</p>
+
+<h3 id="advance-usage">Advance usage</h3>
+<p>You can start multiple instance of the any service to scale and balance the load</p>
+
+<p><code class="language-plaintext highlighter-rouge">foreman start web=5 payment=3</code></p>
+
+<p><strong>Logs:</strong></p>
+<pre><code class="language-log">18:51:12: web.1     |  Web Server started listening on 0.0.0.0:8080
+18:51:12: web.2     |  Web Server started listening on 0.0.0.0:8081
+18:51:12: web.3     |  Web Server started listening on 0.0.0.0:8082
+18:51:12: web.4     |  Web Server started listening on 0.0.0.0:8083
+18:51:12: web.5     |  Web Server started listening on 0.0.0.0:8084
+18:51:12: payment.1 |  Payments started listening on 0.0.0.0:3000
+18:51:12: payment.2 |  Payments started listening on 0.0.0.0:3001
+18:51:12: payment.3 |  Payments started listening on 0.0.0.0:3002
+18:51:12: ui.1      |  node started listening on 0.0.0.0:4000
+</code></pre>
 
 <p>For more options and official documentation on the same find it <a href="https://ddollar.github.io/foreman" target="_blank" rel="noopener noreferrer">here</a></p>
 
@@ -110,23 +152,19 @@ Let quickly jump to that section below.</p>
     
       <a href="/tags/microservices"><em>#microservices</em></a>
     
-      <a href="/tags/mac"><em>#mac</em></a>
-    
-      <a href="/tags/osx"><em>#osx</em></a>
-    
   </small>
 
 
 
 
+<script src="/assets/js/copyCode.js"></script>
 
       </section>
       <footer>
         
       </footer>
     </div>
-    <script src="/assets/js/scale.fix.js"></script>    
-    <script src="/assets/js/copyCode.js"></script>
+    <script src="/assets/js/scale.fix.js"></script>
     
   </body>
 </html>

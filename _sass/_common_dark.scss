@@ -28,6 +28,10 @@
         color: $code_dark;
     }
 
+    strong {
+        color: $bold_dark;
+    }
+
     .highlight,
     pre {
         background-color: $code_bg_dark;

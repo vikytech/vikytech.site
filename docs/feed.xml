@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-07-18T11:37:49+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">Micro services in Local</title><link href="https://vikytech.site/MIL" rel="alternate" type="text/html" title="Micro services in Local" /><published>2021-06-04T16:00:00+05:30</published><updated>2021-06-04T16:00:00+05:30</updated><id>https://vikytech.site/manage-multiple-microservice-in-local</id><content type="html" xml:base="https://vikytech.site/MIL">&lt;p&gt;We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vikytech.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.site/" rel="alternate" type="text/html" /><updated>2021-07-18T14:27:56+05:30</updated><id>https://vikytech.site/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">Micro services in Local</title><link href="https://vikytech.site/MIL" rel="alternate" type="text/html" title="Micro services in Local" /><published>2021-06-04T16:00:00+05:30</published><updated>2021-06-04T16:00:00+05:30</updated><id>https://vikytech.site/manage-multiple-microservice-in-local</id><content type="html" xml:base="https://vikytech.site/MIL">&lt;p&gt;We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.&lt;/p&gt;
 
 &lt;p&gt;Well as a developer I have always believed that writing automation take time but eventually saves time!!&lt;/p&gt;
 
-&lt;p&gt;Now that you have read until here you are curious enough to know the solution I have in mind right!!
-Let quickly jump to that section below.&lt;/p&gt;
+&lt;p&gt;Now that you have read until here you are curious enough to know the solution I have in mind right!!&lt;/p&gt;
+
+&lt;p&gt;Let quickly jump to that section below.&lt;/p&gt;
 
 &lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
 
@@ -12,23 +13,40 @@ Let quickly jump to that section below.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew install foreman&lt;/code&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;h4 id=&quot;using-homebrew&quot;&gt;Using homebrew&lt;/h4&gt;
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew install foreman&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;h4 id=&quot;using-npm&quot;&gt;Using &lt;a href=&quot;https://www.npmjs.com/package/foreman&quot;&gt;npm&lt;/a&gt;&lt;/h4&gt;
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install -g foreman&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Note: If you install via npm then replace the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foreman&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nf&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;h3 id=&quot;define&quot;&gt;Define&lt;/h3&gt;
 
-    &lt;p&gt;Go ahead and define a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;procfile&lt;/code&gt; as below in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root&lt;/code&gt; folder of all your services&lt;/p&gt;
+    &lt;p&gt;Go ahead and define a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Procfile&lt;/code&gt; as below in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root&lt;/code&gt; folder of all your services&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;code-container&quot;&gt;
     &lt;button class=&quot;copy-code-button&quot; aria-label=&quot;Copy code to clipboard&quot;&gt;&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_1&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME_ON_PORT_2&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT2&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;&amp;lt;YET_ANOTHER_BACKEND_SERVICE_NAME_ON_PORT_3&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp;  &amp;lt;COMMAND_TO_START_THE_SERVICE:PORT3&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;&amp;lt;FRONTEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE_2:PORT4&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;BACKEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&amp;lt;YET_ANOTHER_BACKEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp;  &amp;lt;COMMAND_TO_START_THE_SERVICE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&amp;lt;FRONTEND_SERVICE_NAME&amp;gt;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd PATH_TO_SERVICE &amp;amp;&amp;amp; &amp;lt;COMMAND_TO_START_THE_SERVICE_2&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;web&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd webserver &amp;amp;&amp;amp; ./gradlew build&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;payment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd payments &amp;amp;&amp;amp;  rails serve&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cd frontend &amp;amp;&amp;amp; npm run dev&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
   &lt;li&gt;
     &lt;h3 id=&quot;run&quot;&gt;Run&lt;/h3&gt;
@@ -36,9 +54,32 @@ Let quickly jump to that section below.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;Logs:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-log&quot;&gt;18:51:12: web.1     |  Web Server started listening on 0.0.0.0:8080
+18:51:12: payment.1 |  Payments started listening on 0.0.0.0:3000
+18:51:12: ui.1      |  node started listening on 0.0.0.0:4000
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;The setup is that simple and easy to use&lt;/p&gt;
 
-&lt;p&gt;For more options and official documentation on the same find it &lt;a href=&quot;https://ddollar.github.io/foreman&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name>Vikhyath Choradia</name></author><category term="tech" /><category term="utility" /><category term="microservices" /><category term="mac" /><category term="osx" /><summary type="html">We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.</summary></entry><entry><title type="html">Mutation Testing</title><link href="https://vikytech.site/mutation-testing" rel="alternate" type="text/html" title="Mutation Testing" /><published>2020-10-29T07:00:00+05:30</published><updated>2020-10-29T07:00:00+05:30</updated><id>https://vikytech.site/Mutation-Testing</id><content type="html" xml:base="https://vikytech.site/mutation-testing">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nTTp8c1C8jA&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/3875111/116968161-900f5b80-acd1-11eb-93b0-ef9d12aa4826.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;advance-usage&quot;&gt;Advance usage&lt;/h3&gt;
+&lt;p&gt;You can start multiple instance of the any service to scale and balance the load&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foreman start web=5 payment=3&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Logs:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-log&quot;&gt;18:51:12: web.1     |  Web Server started listening on 0.0.0.0:8080
+18:51:12: web.2     |  Web Server started listening on 0.0.0.0:8081
+18:51:12: web.3     |  Web Server started listening on 0.0.0.0:8082
+18:51:12: web.4     |  Web Server started listening on 0.0.0.0:8083
+18:51:12: web.5     |  Web Server started listening on 0.0.0.0:8084
+18:51:12: payment.1 |  Payments started listening on 0.0.0.0:3000
+18:51:12: payment.2 |  Payments started listening on 0.0.0.0:3001
+18:51:12: payment.3 |  Payments started listening on 0.0.0.0:3002
+18:51:12: ui.1      |  node started listening on 0.0.0.0:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more options and official documentation on the same find it &lt;a href=&quot;https://ddollar.github.io/foreman&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name>Vikhyath Choradia</name></author><category term="utility" /><category term="microservices" /><category term="microservices" /><summary type="html">We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.</summary></entry><entry><title type="html">Mutation Testing</title><link href="https://vikytech.site/mutation-testing" rel="alternate" type="text/html" title="Mutation Testing" /><published>2020-10-29T07:00:00+05:30</published><updated>2020-10-29T07:00:00+05:30</updated><id>https://vikytech.site/Mutation-Testing</id><content type="html" xml:base="https://vikytech.site/mutation-testing">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nTTp8c1C8jA&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/3875111/116968161-900f5b80-acd1-11eb-93b0-ef9d12aa4826.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/vikytech/MutationTesting&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
 
