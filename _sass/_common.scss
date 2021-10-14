@@ -41,14 +41,17 @@ pre {
 
 header {
     flex: 1 1 auto;
+
     .header-wrapper {
         position: fixed;
     }
+
     position: relative;
 }
 
 section {
     flex: 1 1 60%;
+
     img {
         max-width: 60%;
     }
@@ -133,5 +136,25 @@ pre {
     .tag {
         color: $sub_link;
         padding: 5px;
+    }
+}
+
+.button {
+    font-weight: 400;
+    padding: 20px;
+    background-color: rgba($button_bg, 1.0);
+    color: rgb(145, 122, 122);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: rgba($button_bg, 0.8);
+        transition: all .2s linear;
     }
 }

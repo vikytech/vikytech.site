@@ -10,6 +10,7 @@
 
     header {
         flex: 1 1 auto;
+
         .header-wrapper {
             position: relative;
         }
@@ -17,8 +18,25 @@
 
     section {
         flex: 1 1 auto;
+
         img {
             max-width: 100%;
+        }
+    }
+
+    .button {
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        width: 200px;
+    }
+
+    .space {
+        flex-wrap: wrap;
+        .window_group {
+            min-width: 100%;
+            min-height: 100%;
+            align-items: center;
         }
     }
 }
