@@ -14,7 +14,7 @@ layout: default
     <h1>Content for &ldquo;{{ page.title }}&rdquo; category</h1>
   {% endif %}
 
-  <section>
+  <div>
     <!-- Show post excerpts for the current page -->
     {% for post in paginator.posts limit:paginator.per_page %}
       <article>
@@ -22,7 +22,7 @@ layout: default
         <p>{{ post.excerpt }}</p>
       </article>
     {% endfor %}
-  </section>
+  </div>
   <!-- Show navigation next/previous page links if applicable -->
   <nav><p>
     {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>{% endif %}
@@ -34,7 +34,7 @@ layout: default
   <!-- Pagination is not active -->
   <h1>Content for &ldquo;{{ page.title }}&rdquo; category</h1>
 
-  <section>
+  <div>
     <!-- Show excerpts for all posts in this category -->
     {% for post in page.posts %}
       <article>
@@ -42,7 +42,7 @@ layout: default
         <p>{{ post.excerpt }}</p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
 {% endif %}
 
