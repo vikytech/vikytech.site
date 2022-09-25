@@ -320,6 +320,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-darwin-21
 
 DEPENDENCIES
   github-pages
@@ -331,4 +332,4 @@ DEPENDENCIES
   minimal
 
 BUNDLED WITH
-   2.2.20
+   2.3.22

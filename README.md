@@ -1,5 +1,5 @@
-# vikytech.site
-Website for vikytech.site
+# vikytech.in
+Website for vikytech.in
 
 ## Dev setup
 - To build locally `jekyll build`
