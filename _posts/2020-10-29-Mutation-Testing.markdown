@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postlist
 title:  "Mutation Testing"
 date:   2020-10-29 07:00:00 +0530
 author: Vikhyath Choradia

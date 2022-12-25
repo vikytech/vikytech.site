@@ -1,6 +1,6 @@
 ---
 title: Micro services in Local
-layout: post
+layout: postlist
 date: '2021-06-04 16:00:00'
 author: Vikhyath Choradia
 categories:

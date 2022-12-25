@@ -12,16 +12,31 @@ facebook: vikytech.page
 linkedin: vikytech
 
 # Build settings
-# markdown: kramdown
-theme: jekyll-theme-minimal
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+permalink: /:title
+
+# theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-category-pages
 sass:
-  sass_dir: _sass
+  load_paths:
+    - _src/_sass
+    - node_modules
+    - vendor/node_modules
+  style: compressed
+  # sass_dir: _src/_sass
   style: compressed
 logo: /assets/img/name-logo.png
+layouts_dir: _src/_layouts
+includes_dir: _src/_includes
+plugins_dir: _src/_plugins
 category_layout: "category_index.html"
 category_path: "tags"
 # paginate: 2
@@ -29,6 +44,7 @@ show_downloads: false
 destination: docs/
 include:
   - CNAME
+  - _pages
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -40,3 +56,82 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - temp
+  - tmp
+  - .hidden
+  - yarn-error.log
+  - node_modules
+  - _src
+  - vendor
+  - cache
+  - CHANGELOG
+  - COPYING
+  - package-lock.json
+  - package.json
+  - README.md
+  - README-ptbr.md
+  - gulpfile.js
+  - Rakefile
+  - yarn.lock
+  - Makefile
+
+feed:
+  path: /blog/feed.xml
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+tag_page_layout: tag
+tag_page_dir: blog/tags
+tag_permalink_style: pretty
+
+imager:
+  dir_posts: "assets/images/posts"
+
+reading_time:
+  locale: en_US
+
+datelang:
+  locale: en_US
+  reload: true
+
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  sort_field: 'date'
+  sort_reverse: true
+  per_page: 5
+  permalink: '/:num/'
+  locale: ''
+  title: ':title - Page :num'
+  limit: 0
+  extension: html
+  indexpage: 'index'
+
+gist:
+  noscript: false
+
+jektify:
+  enable: true
+  open: true
+  toggle:
+    enable: true
+  spotify:
+    user: # "you_user_spotify"
+    text: "See me no Spotify"
+  sass:
+    jekyll: true
+    other:
+      dir: "_src/_sass"
+  title:
+    enable: false
+    text: "Music name"
+  description:
+    enable: false
+    text: |
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.

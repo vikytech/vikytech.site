@@ -1,0 +1,39 @@
+{
+    "name": "vikytech",
+    "version": "1.1.0",
+    "description": "Vikytech",
+    "main": "index.md",
+    "scripts": {
+        "preinstall": "bundle install",
+        "postinstall": "gulp postinstall",
+        "build": "JEKYLL_ENV=production bundle exec jekyll build; gulp",
+        "serve": "bundle exec jekyll serve --drafts",
+        "page": "bundle exec rake page",
+        "post": "bundle exec rake post",
+        "clean": "gulp clean"
+    },
+    "repository": "git+https://github.com/vikytech/site.git",
+    "keywords": [
+        "tech",
+        "site",
+        "jekyll"
+    ],
+    "author": "VikyTech",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vikytech/site/issues"
+    },
+    "homepage": "https://github.com/vikytech/site#readme",
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.16.1"
+    },
+    "devDependencies": {
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-uglify": "^3.0.2"
+    }
+}
