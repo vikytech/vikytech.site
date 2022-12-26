@@ -25,7 +25,7 @@ sidebar:
   avatar:
     enable: true
     background: true
-    border: true
+    border: false
     circle: true
     # This "svg_inner" function, you need to put your SVG inside
     # the HTML in the sidebar. Enter the block:

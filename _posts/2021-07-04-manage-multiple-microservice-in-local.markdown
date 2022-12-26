@@ -9,6 +9,7 @@ categories:
 tags:
 - microservices
 permalink: MIL
+script: [copyCode.js]
 ---
 
 We have all been there when we wanted to start multiple dependent micro service(s) at once in our local to develop / test an application.
@@ -36,7 +37,7 @@ The setup is quite simple and easy to setup for mac
 
     Go ahead and define a simple `Procfile` as below in `root` folder of all your services
 
-{% include codeCopy.html %}
+{% include partials/codeCopy.html %}
 ```yml
 <BACKEND_SERVICE_NAME>: cd PATH_TO_SERVICE && <COMMAND_TO_START_THE_SERVICE>
 <YET_ANOTHER_BACKEND_SERVICE_NAME>: cd PATH_TO_SERVICE &&  <COMMAND_TO_START_THE_SERVICE>

@@ -39,7 +39,6 @@ includes_dir: _src/_includes
 plugins_dir: _src/_plugins
 category_layout: "category_index.html"
 category_path: "tags"
-# paginate: 2
 show_downloads: false
 destination: docs/
 include:
@@ -76,7 +75,7 @@ exclude:
   - Makefile
 
 feed:
-  path: /blog/feed.xml
+  path: /blogs/feed.xml
 
 compress_html:
   clippings: all

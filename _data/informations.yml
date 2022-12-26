@@ -45,7 +45,7 @@ website:
       size: "2.3rem"
     menu:
       blog:
-        text: "Blog"
+        text: "Blogs"
         search:
           text: "Search"
         tags:

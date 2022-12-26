@@ -1,17 +1,17 @@
 ---
 layout: page
-order: 5
-title: "About"
+order: 2
+title: About
 date: 2021-11-03 18:03:41 -300
 sitemap:
-priority: 0.7
-changefreq: 'monthly'
-lastmod: 2022-12-28 02:03:41
+  priority: 0.7
+  changefreq: monthly
+  lastmod: 2022-12-28 02:03:41
+menu:
+  enable: true 
+  local: [default, about]
 icon: fa-user
-menu: about
-enable: true
-local: [default]
-script: []
+script: [terminalEffect.js]
 published: true
 permalink: /about
 ---
@@ -48,5 +48,3 @@ I joined [ThoughtWorks](https://www.thoughtworks.com/profiles/vikhyath-choradia)
   <img align="left" src="https://github-readme-stats.vercel.app/api?username=vikytech&show_icons=true&locale=en&theme=gotham" alt="vikytech" width="45%"/>
   <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=vikytech&theme=gotham" alt="vikytech" width="45%"/>
  </div>
-
- <script src="{{ "/assets/js/terminalEffect.js" | relative_url }}"></script>

@@ -1,12 +1,10 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-# gem "minimal"
 gem "webrick"
 gem 'rake', '~> 13.0.3'
 gem 'jekyll', '~> 4.2.0'
 gem 'json', '~> 2.5.1'
-gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15.1"

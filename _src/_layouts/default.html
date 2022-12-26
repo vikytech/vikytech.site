@@ -5,7 +5,7 @@
   {% include layouts/maintenance.html %}
 {% else %}
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.lang | default: "en-US" }}">
   {% include partials/head.html %}
 <body class="body {% if load_options.global.links.underline == true %} underline_links {% endif %}" id="top">
   <div class="container layout_default">
