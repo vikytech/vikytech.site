@@ -35,9 +35,9 @@ function postinstall_statics() {
 // function minify javascripts
 function javascripts() {
     return gulp
-        .src('public/assets/js/**/*.js')
+        .src('docs/assets/js/**/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('public/assets/js'))
+        .pipe(gulp.dest('docs/assets/js'))
 }
 
 // function minify html
@@ -45,7 +45,7 @@ function html_minify() {
     return gulp
         .src('docs/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-        .pipe(gulp.dest('public'))
+        .pipe(gulp.dest('docs'))
 }
 
 // function optimize images
