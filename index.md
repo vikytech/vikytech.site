@@ -5,7 +5,6 @@ menu:
   enable: true
   local: [null]
 published: true
-script: [hello.js]
 ---
 
 # Recent Posts
@@ -23,9 +22,5 @@ public static void main(String[] args) {
 ```
 
 # Upcoming Features:
-- Search by
-  - Category
-  - Tag
-  - Free-text
 - Live Editor Template
 - CMS
