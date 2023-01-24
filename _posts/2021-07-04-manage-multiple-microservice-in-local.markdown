@@ -9,6 +9,8 @@ categories:
 tags:
 - microservices
 permalink: MIL
+comments: false
+published: true
 script: [copyCode.js]
 ---
 

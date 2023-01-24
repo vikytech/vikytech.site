@@ -18,3 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-category-pages"
   gem "jekyll-admin"
 end
+
+group :development do
+  gem 'colorize'
+end

@@ -78,7 +78,7 @@ class Manager
       end
       slug = slug_generator(title)
       date = datetime_generator('%Y-%m-%d')
-      datetime = datetime_generator('%Y-%m-%d %R:%S')
+      datetime = datetime_generator('%Y-%m-%d %R:%S %z')
       if type == 'page'
         filename = File.join(directory, "#{slug}.#{CONFIG['markdown_extension']}")
       else
@@ -112,7 +112,7 @@ class Manager
         file.puts("  local: [default]")
         file.puts("script: []")
         file.puts("published: false")
-        file.puts("permalink: # add permilink for page. E.g: /smallparty/")
+        file.puts("permalink: #{array[0]}")
         file.puts("---")
         file.puts("")
         file.puts "<!-- Write from here your page !!! -->"
@@ -128,17 +128,18 @@ class Manager
         file.puts("layout: post")
         file.puts("title: \"#{array[0]}\"")
         file.puts("date: #{array[2]}")
-        file.puts("tags: ['tag1','tag2','tag3']")
+        file.puts("tags: []")
         file.puts("published: false")
         file.puts("comments: false")
+        file.puts("permalink: #{array[0]}")
         file.puts("excerpted: |
         Put here your excerpt")
-        file.puts("day_quote:")
-        file.puts(" title: \"Put here title quote of the day\"")
-        file.puts(" description: |
-        \"Put here your quote of the day\"")
-        file.puts("")
-        file.puts("# Does not change and does not remove 'script' variable.")
+        # file.puts("day_quote:")
+        # file.puts(" title: \"Put here title quote of the day\"")
+        # file.puts(" description: |
+        # \"Put here your quote of the day\"")
+        # file.puts("")
+        # file.puts("# Does not change and does not remove 'script' variable.")
         file.puts("script: [post.js]")
         file.puts("---")
         file.puts("")

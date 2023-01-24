@@ -7,6 +7,8 @@ categories: ["talks", "java"]
 tags: ["java", "mutation-testing", "pit"]
 permalink: mutation-testing
 script: [copyCode.js]
+comments: false
+published: true
 ---
 
 [![Watch the video](/assets/images/posts/mutation-testing.png)](https://www.youtube.com/watch?v=nTTp8c1C8jA)

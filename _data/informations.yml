@@ -15,7 +15,7 @@ website:
   theme: "hacking"
 # Configuration default
   title: "VikyTech"
-  description: ""
+  description: "Micro tech blogs and content"
   launch: 2012
   metatag:
     google_site_verification:
