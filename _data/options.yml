@@ -13,7 +13,7 @@ google:
     enable: true
 global:
   links:
-    underline: true
+    underline: false
 home:
   animation: true
   terminal:
