@@ -1,7 +1,8 @@
 # vikytech.in
 Website for vikytech.in
 
-## Dev setup
-- To build locally `jekyll build` 
-  - Prefix `JEKYLL_ENV=production` to the above command to compile in production mode
-- To start locally `jekyll serve -w`
+## Dev commands
+- To build locally `npm run build` 
+- To start locally `npm run serve`
+- Create new post `npm run post`
+- Create new page `npm run page`
