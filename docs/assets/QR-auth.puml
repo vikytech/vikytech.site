@@ -1,0 +1,124 @@
+@startuml "QR based Authentication"
+
+' Configurations
+' ------------
+!pragma teoz true
+
+autonumber
+hide unlinked
+
+' Customization
+' ------------
+skinparam {
+    BackgroundColor White
+    sequenceArrowThickness 2
+    sequenceReferenceAlign center
+    ParticipantPadding 5
+    BoxPadding 50
+    lifelineStrategy nosolid
+
+    roundcorner 15
+    maxmessagesize 300
+    PageMargin 20
+    Legend {
+        FontStyle bold
+        Padding 1
+    }
+    Note {
+        BackgroundColor #WhiteSmoke
+    }
+}
+
+!$spmColor="#LightPink"
+!$rpColor="#SkyBlue"
+!$aspColor="#PaleGreen"
+
+' Declarations
+' ------------
+title "QR based Authentication\nA plug and play auth system" 
+
+actor "User" as user
+
+participant "Mobile App" as spm $spmColor
+participant "Client (frontend)" as rp $rpColor
+participant "Authenticator(backend)" as asp $aspColor
+
+' User Flow
+' ------------
+activate rp $rpColor
+user -> rp: visit https://client.com/login
+rp --> rp: *Create session\n*generate nonce & state
+rp --> asp: /auth?clientId&nounce&state
+deactivate rp
+
+activate asp $aspColor
+asp --> asp: * retrive client details\n*create auth_ref
+asp --> asp: redirect to\nhttps://login.client.com/authorize?\nclient_id=NDI-CORE-BRIDGE&nonce=NDI\n&state=ARB1&esrvc=NDI-CORE-BRIDGE\n&ndi_esrvc=RP1_ext_id&ui_locale\n/authorize?client_id=NDI-CORE-BRIDGE&nonce=NDI&state=ARB1\n&esrvc=NDI-CORE-BRIDGE&ndi_esrvc=RP1_ext_id&ui_locale
+
+asp --> asp: /auth?client_id=<SP_BRIDGE>&nonce&state=SPB_STATE&esrvc=NDI-CORE-BRIDGE&ndi_esrvc=RP1&ndi_auth_ref=ARB1
+asp --> asp: * retrive client details\n* create auth_ref_session(use state=SPB_STATE)\n - resolve fqdn, clientExtId(RP1_ext_id) & displayName
+asp -> rp: auth_ref, browser_session_id
+deactivate asp
+
+rnote over rp
+    Generate QR
+end note
+
+rp -> asp: /auth-session/<auth_ref>/status\nlong poll (20s)
+
+activate spm $spmColor
+spm -> rp: Scan QR
+deactivate spm
+
+activate asp $aspColor
+spm -> asp: /auth-session/<auth_ref>/challenge
+asp --> asp: Generate Challenge Token
+asp -> spm: {"token": challenge_jwt}
+deactivate asp
+
+activate spm $spmColor
+spm-> asp: /.well-known/keys
+asp --> spm: NDI JWKS
+spm -> spm: user accepts by PIN/touchID to sign w/ private key
+deactivate spm
+
+asp -> rp: {"status: "CHALLENGED"}
+rp -> asp: /auth-session/<auth_ref>/status\nlong poll (20s)
+spm -> asp: /auth-session/<auth_ref>/verification
+
+activate asp $aspColor
+asp --> asp: * Validate token\n* Validate session
+asp --> asp: Validate User and Cert
+asp --> spm: {"status": "OK"}
+asp --> asp: * Create AUTH_CODE
+
+activate rp $rpColor
+asp -> rp: {"status": "SUCCESS",\nlocation:"https://login.client.com/redirect.ndiop?code=AUTH_CODE&statue=SPB_STATE"}
+deactivate rp
+deactivate asp
+
+rp -> asp: /auth/client-fedration/code=AUTH_CODE&state=STATE
+
+activate asp $aspColor
+asp --> asp: find session by state=STATE
+asp --> asp: * Decrypt\n* Check iss, nonce, etc
+asp --> asp: * Create auth_code_session(NDI-CORE)
+asp --> rp: redirect to \n https://rp.com/redirect_uri?code=NDI-CORE&state=RP1-STATE
+deactivate asp
+
+activate rp $rpColor
+rp -> rp: Check RP1-STATE w/ session
+activate asp $aspColor
+rp -> asp: /token\n (NDI-CORE, client_jwt, scope)
+asp --> asp: * Retrive client details
+asp --> asp: * Validate Session
+asp -> asp: * Delete Session
+asp -> rp: ID token\n(sub, amr, iss, etc)
+deactivate asp
+rp -> rp: * Decrypt\n* Check iss, nonce, etc\n* Map to user account
+rp --> rp: User Session created
+
+rp -> user: User Logged in successfully !!!!
+deactivate rp
+
+@enduml

@@ -46,5 +46,10 @@ For example, an attacker could create a fake QR code that looks legitimate and t
 ### Single Factor Authentication:
 While QR-based authentication can be used as a second factor of authentication, it is primarily a single factor authentication method. This means that it may not be sufficient for securing highly sensitive or critical resources and systems.
 
-> In conclusion, QR-based authentication systems provide a secure, convenient solution for authentication and access control. With the widespread use of smartphones and the increasing need for secure authentication, QR-based authentication is becoming an increasingly popular choice for businesses and organizations of all sizes.
+---
+# User journey
 
+<img src="/assets/images/posts/QR based Authentication.png" alt="User Journey" width="800px" height="100%">
+
+---
+> In conclusion, QR-based authentication systems provide a secure, convenient solution for authentication and access control. With the widespread use of smartphones and the increasing need for secure authentication, QR-based authentication is becoming an increasingly popular choice for businesses and organizations of all sizes.
