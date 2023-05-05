@@ -1,13 +1,6 @@
 [
   
     {
-      "title"    : "QR based authentication",
-      "tags"     : "authentication",
-      "url"     : "/QR-auth",
-      "date"     : "12/4/2023"
-    } ,
-  
-    {
       "title"    : "Micro services in Local",
       "tags"     : "microservices",
       "url"     : "/MIL",
