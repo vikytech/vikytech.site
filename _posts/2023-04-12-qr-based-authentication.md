@@ -4,7 +4,7 @@ title: "QR based authentication"
 date: 2023-04-12 11:06:36 +0530
 tags: ["authentication"]
 author: Vikhyath Choradia
-published: false
+published: true
 comments: false
 permalink: QR-auth
 script: [post.js]
@@ -49,7 +49,7 @@ While QR-based authentication can be used as a second factor of authentication, 
 ---
 # User journey
 
-<img src="/assets/images/posts/QR based Authentication.png" alt="User Journey" width="800px" height="100%">
+<img src="/assets/images/posts/QR-auth-userflow.png" alt="User Journey" width="800px" height="100%">
 
 ---
 > In conclusion, QR-based authentication systems provide a secure, convenient solution for authentication and access control. With the widespread use of smartphones and the increasing need for secure authentication, QR-based authentication is becoming an increasingly popular choice for businesses and organizations of all sizes.
