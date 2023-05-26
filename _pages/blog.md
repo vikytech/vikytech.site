@@ -19,4 +19,4 @@ permalink: /blogs/ # add permilink for page. E.g: /smallparty/
 
 <!-- Do not delete this file! Put your text below. -->
 
-What follows is a list of weblog posts from as early as {{ site.debutyear }}. I hope you enjoy
+I hope you enjoy
