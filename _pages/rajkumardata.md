@@ -9,7 +9,7 @@ menu:
   local: [default]
 script: [fetchProfileData.js]
 vendor: []
-published: true
+published: false
 permalink: rajkumardata
 ---
 
