@@ -37,7 +37,7 @@ When a user wants to access a resource or service that requires authentication, 
 
 While QR-based authentication has several advantages, there are also some potential drawbacks and limitations to consider. Here are some cons of QR-based authentication:
 
-Dependence on Mobile Devices: QR-based authentication relies heavily on mobile devices and their associated technology, such as cameras and QR code scanners. If a user's device does not have these features or they are not functioning correctly, the authentication process may not be possible.
+Dependence on Mobile Device: QR-based authentication relies heavily on mobile devices and their associated technology, such as cameras and QR code scanners. If a user's device does not have these features or they are not functioning correctly, the authentication process may not be possible.
 
 ### Security Concerns: 
 While QR codes are unique and difficult to replicate, they can still be vulnerable to hacking and spoofing attacks. 
