@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "A Concise Guide to OpenID Connect (OIDC)",
+      "tags"     : "",
+      "url"     : "/oidc",
+      "date"     : "22/5/2023"
+    } ,
+  
+    {
       "title"    : "QR based authentication",
       "tags"     : "authentication",
       "url"     : "/QR-auth",

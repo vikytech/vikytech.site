@@ -29,7 +29,7 @@ This component generates a unique QR code for each authentication request. The Q
 ### Mobile Application:
 This is the user-facing component of the system. Users scan the QR code using a mobile device that has the authentication application installed. The application sends the scanned QR code to the authentication server for verification.
 
-When a user wants to access a resource or service that requires authentication, they launch the authentication application on their mobile device. The application generates a request for a QR code from the authentication server. The server generates a unique QR code and sends it back to the application. The user then scans the QR code with their mobile device. The authentication application sends the scanned QR code to the authentication server for verification. If the code is valid, the server grants access to the requested resource or service.
+When a user wants to access a resource or service that requires authentication, they open the client website. The client application generates a request for a auth code from the authentication server. The server generates a unique auth code and the client application uses it to generate the QR code. The user then scans the QR code with their mobile device. The authentication application sends the scanned QR code to the authentication server for verification. If the code is valid, the server grants access to the requested resource or service by performing [OIDC](/oidc) dance.
 
 ---
 

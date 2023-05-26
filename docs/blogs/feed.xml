@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://vikytech.in/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.in/" rel="alternate" type="text/html" /><updated>2023-05-26T10:50:48+05:30</updated><id>https://vikytech.in/blogs/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">QR based authentication</title><link href="https://vikytech.in/QR-auth" rel="alternate" type="text/html" title="QR based authentication" /><published>2023-04-12T11:06:36+05:30</published><updated>2023-04-12T11:06:36+05:30</updated><id>https://vikytech.in/qr-based-authentication</id><content type="html" xml:base="https://vikytech.in/QR-auth">&lt;h1 id=&quot;what-is-qr-based-authentication-&quot;&gt;What is QR based authentication ?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://vikytech.in/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.in/" rel="alternate" type="text/html" /><updated>2023-05-26T11:15:51+05:30</updated><id>https://vikytech.in/blogs/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">A Concise Guide to OpenID Connect (OIDC)</title><link href="https://vikytech.in/oidc" rel="alternate" type="text/html" title="A Concise Guide to OpenID Connect (OIDC)" /><published>2023-05-22T11:10:21+05:30</published><updated>2023-05-22T11:10:21+05:30</updated><id>https://vikytech.in/oidc</id><content type="html" xml:base="https://vikytech.in/oidc">&lt;p&gt;Introduction:
+In the world of web authentication and authorization, OpenID Connect (OIDC) has emerged as a popular standard. It builds upon the OAuth 2.0 framework to provide a simple and secure way to authenticate users and access their identity information. In this blog post, we’ll explore the basics of OIDC, its key components, and how it works.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is OIDC?
+OpenID Connect is an identity layer built on top of OAuth 2.0. It allows clients (applications or services) to verify the identity of end-users based on the authentication performed by an authorization server. OIDC enables a user to log in to one website and use their identity information to access multiple other websites or services without sharing their credentials.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Key Components:
+    &lt;ul&gt;
+      &lt;li&gt;Client: The application or service that wants to authenticate the user.&lt;/li&gt;
+      &lt;li&gt;Identity Provider (IDP): The server responsible for authenticating the user and providing identity information.&lt;/li&gt;
+      &lt;li&gt;Authorization Server (AS): The server that issues access tokens and provides authorization services.&lt;/li&gt;
+      &lt;li&gt;User: The person who wants to access the client application.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;OIDC Flow:
+The OIDC flow involves several steps:
+    &lt;ul&gt;
+      &lt;li&gt;Client Registration: The client registers with the authorization server and obtains a client identifier and secret.&lt;/li&gt;
+      &lt;li&gt;User Authentication: The user is redirected to the IDP, where they authenticate themselves.&lt;/li&gt;
+      &lt;li&gt;Authorization Grant: After successful authentication, the IDP provides an authorization code to the client.&lt;/li&gt;
+      &lt;li&gt;Token Exchange: The client exchanges the authorization code for an access token and an ID token from the authorization server.&lt;/li&gt;
+      &lt;li&gt;Accessing Resources: The client uses the access token to request resources from a resource server.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ID Token:
+The ID token is a crucial part of OIDC. It contains claims about the authenticated user, such as their name, email, and user ID. The client can use this information for user identification and personalization.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Benefits of OIDC:
+    &lt;ul&gt;
+      &lt;li&gt;Single Sign-On (SSO): Users can authenticate once and access multiple services without needing to enter their credentials repeatedly.&lt;/li&gt;
+      &lt;li&gt;Secure Identity Exchange: OIDC leverages the security features of OAuth 2.0 to ensure the confidentiality and integrity of user identity information.&lt;/li&gt;
+      &lt;li&gt;Standardized Protocol: OIDC is a widely adopted standard, with support from major identity providers and libraries, making it easier to implement and integrate into applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Conclusion:
+OpenID Connect (OIDC) provides a standardized and secure solution for user authentication and identity management in modern web applications. By leveraging the power of OAuth 2.0, OIDC enables developers to implement robust authentication mechanisms and deliver a seamless user experience. Understanding the basics of OIDC and its key components is crucial for building secure and user-friendly applications in today’s interconnected digital landscape.&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openid.net/connect/&quot;&gt;OpenID Connect website&lt;/a&gt;\n
+&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc6749&quot;&gt;OAuth 2.0 specification&lt;/a&gt;\n
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2&quot;&gt;OpenID Connect explained&lt;/a&gt;\n
+&lt;a href=&quot;https://openid.net/developers/certified/&quot;&gt;Identity Providers supporting OIDC&lt;/a&gt;\n
+&lt;a href=&quot;https://openid.net/developers/certified/&quot;&gt;OIDC libraries and SDKs&lt;/a&gt;\n&lt;/p&gt;</content><author><name>Vikhyath Choradia</name></author><summary type="html">Introduction: In the world of web authentication and authorization, OpenID Connect (OIDC) has emerged as a popular standard. It builds upon the OAuth 2.0 framework to provide a simple and secure way to authenticate users and access their identity information. In this blog post, we’ll explore the basics of OIDC, its key components, and how it works.</summary></entry><entry><title type="html">QR based authentication</title><link href="https://vikytech.in/QR-auth" rel="alternate" type="text/html" title="QR based authentication" /><published>2023-04-12T11:06:36+05:30</published><updated>2023-04-12T11:06:36+05:30</updated><id>https://vikytech.in/qr-based-authentication</id><content type="html" xml:base="https://vikytech.in/QR-auth">&lt;h1 id=&quot;what-is-qr-based-authentication-&quot;&gt;What is QR based authentication ?&lt;/h1&gt;
 &lt;p&gt;QR codes have become ubiquitous in today’s digital world, used for everything from advertising campaigns to event check-ins. They are also being increasingly used for secure authentication and access control. In this blog post, we will explore how QR-based authentication works and its benefits.&lt;/p&gt;
 
 &lt;p&gt;QR-based authentication systems work by generating a unique QR code that can be scanned by a mobile device. The QR code contains a unique identifier that is linked to the user’s account information, such as a password or other authentication credentials. When the user scans the QR code with their mobile device, the system verifies their identity and grants them access to the desired resource.&lt;/p&gt;
@@ -18,7 +66,7 @@
 &lt;h3 id=&quot;mobile-application&quot;&gt;Mobile Application:&lt;/h3&gt;
 &lt;p&gt;This is the user-facing component of the system. Users scan the QR code using a mobile device that has the authentication application installed. The application sends the scanned QR code to the authentication server for verification.&lt;/p&gt;
 
-&lt;p&gt;When a user wants to access a resource or service that requires authentication, they launch the authentication application on their mobile device. The application generates a request for a QR code from the authentication server. The server generates a unique QR code and sends it back to the application. The user then scans the QR code with their mobile device. The authentication application sends the scanned QR code to the authentication server for verification. If the code is valid, the server grants access to the requested resource or service.&lt;/p&gt;
+&lt;p&gt;When a user wants to access a resource or service that requires authentication, they open the client website. The client application generates a request for a auth code from the authentication server. The server generates a unique auth code and the client application uses it to generate the QR code. The user then scans the QR code with their mobile device. The authentication application sends the scanned QR code to the authentication server for verification. If the code is valid, the server grants access to the requested resource or service by performing &lt;a href=&quot;/oidc&quot;&gt;OIDC&lt;/a&gt; dance.&lt;/p&gt;
 
 &lt;hr /&gt;
 
