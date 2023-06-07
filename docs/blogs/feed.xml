@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://vikytech.in/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.in/" rel="alternate" type="text/html" /><updated>2023-05-26T20:05:05+05:30</updated><id>https://vikytech.in/blogs/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">A Concise Guide to OpenID Connect (OIDC)</title><link href="https://vikytech.in/oidc" rel="alternate" type="text/html" title="A Concise Guide to OpenID Connect (OIDC)" /><published>2023-05-22T11:10:21+05:30</published><updated>2023-05-22T11:10:21+05:30</updated><id>https://vikytech.in/oidc</id><content type="html" xml:base="https://vikytech.in/oidc">&lt;p&gt;Introduction:
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://vikytech.in/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vikytech.in/" rel="alternate" type="text/html" /><updated>2023-06-07T14:12:20+05:30</updated><id>https://vikytech.in/blogs/feed.xml</id><title type="html">VikyTech</title><subtitle>Site to share my learnings in form of blogs.</subtitle><author><name>Vikhyath Choradia</name></author><entry><title type="html">A Concise Guide to OpenID Connect (OIDC)</title><link href="https://vikytech.in/oidc" rel="alternate" type="text/html" title="A Concise Guide to OpenID Connect (OIDC)" /><published>2023-05-22T11:10:21+05:30</published><updated>2023-05-22T11:10:21+05:30</updated><id>https://vikytech.in/oidc</id><content type="html" xml:base="https://vikytech.in/oidc">&lt;p&gt;Introduction:
 In the world of web authentication and authorization, OpenID Connect (OIDC) has emerged as a popular standard. It builds upon the OAuth 2.0 framework to provide a simple and secure way to authenticate users and access their identity information. In this blog post, we’ll explore the basics of OIDC, its key components, and how it works.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -55,7 +55,11 @@ OpenID Connect (OIDC) provides a standardized and secure solution for user authe
 &lt;p&gt;One of the primary benefits of QR-based authentication is that it is highly secure. Since each QR code is unique, it is extremely difficult for unauthorized users to gain access to a system or resource. Additionally, QR-based authentication can be used as a second factor of authentication, providing an extra layer of security.&lt;/p&gt;
 
 &lt;hr /&gt;
+&lt;h1 id=&quot;user-journey&quot;&gt;User journey&lt;/h1&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/QR-auth-userflow.png&quot; alt=&quot;User Journey&quot; width=&quot;800px&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 &lt;h2 id=&quot;three-main-components&quot;&gt;Three main components&lt;/h2&gt;
 
 &lt;h3 id=&quot;authentication-server&quot;&gt;Authentication Server:&lt;/h3&gt;
@@ -78,16 +82,14 @@ OpenID Connect (OIDC) provides a standardized and secure solution for user authe
 &lt;p&gt;Dependence on Mobile Device: QR-based authentication relies heavily on mobile devices and their associated technology, such as cameras and QR code scanners. If a user’s device does not have these features or they are not functioning correctly, the authentication process may not be possible.&lt;/p&gt;
 
 &lt;h3 id=&quot;security-concerns&quot;&gt;Security Concerns:&lt;/h3&gt;
-&lt;p&gt;While QR codes are unique and difficult to replicate, they can still be vulnerable to hacking and spoofing attacks. 
-For example, an attacker could create a fake QR code that looks legitimate and trick a user into scanning it, thereby compromising their security.&lt;/p&gt;
+&lt;p&gt;While QR codes are unique and difficult to replicate, they can still be vulnerable to hacking and spoofing attacks if they are not implemented keeping security in mind.&lt;/p&gt;
+
+&lt;p&gt;For example, an attacker could create a fake QR code that looks legitimate and trick a user into scanning it, thereby compromising their security. Similar to traditional phishing attacks, fraudsters can create fake websites or landing pages that display a QR code, often resembling those used by trusted organizations or services. Unsuspecting users who scan the code may unknowingly provide their login credentials or other sensitive information, which can be used for fraudulent activities.&lt;/p&gt;
+
+&lt;p&gt;Another example may be where fraudsters can use QR codes as part of social engineering scams, they may send an email / text message or via social media apps like WhatsApp / Telegram to individuals, posing as a trusted organization or friend, and include a QR code. The message may claim that scanning the code is necessary to verify identity or unlock special offers. However, the code may actually lead to a fraudulent website or prompt the user to enter personal information that can be misused.&lt;/p&gt;
 
 &lt;h3 id=&quot;single-factor-authentication&quot;&gt;Single Factor Authentication:&lt;/h3&gt;
 &lt;p&gt;While QR-based authentication can be used as a second factor of authentication, it is primarily a single factor authentication method. This means that it may not be sufficient for securing highly sensitive or critical resources and systems.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h1 id=&quot;user-journey&quot;&gt;User journey&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/QR-auth-userflow.png&quot; alt=&quot;User Journey&quot; width=&quot;800px&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;blockquote&gt;

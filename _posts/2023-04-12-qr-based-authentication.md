@@ -17,7 +17,11 @@ QR-based authentication systems work by generating a unique QR code that can be 
 One of the primary benefits of QR-based authentication is that it is highly secure. Since each QR code is unique, it is extremely difficult for unauthorized users to gain access to a system or resource. Additionally, QR-based authentication can be used as a second factor of authentication, providing an extra layer of security.
 
 ---
+# User journey
 
+<img src="/assets/images/posts/QR-auth-userflow.png" alt="User Journey" width="800px" height="100%">
+
+---
 ## Three main components
 
 ### Authentication Server: 
@@ -39,17 +43,15 @@ While QR-based authentication has several advantages, there are also some potent
 
 Dependence on Mobile Device: QR-based authentication relies heavily on mobile devices and their associated technology, such as cameras and QR code scanners. If a user's device does not have these features or they are not functioning correctly, the authentication process may not be possible.
 
-### Security Concerns: 
-While QR codes are unique and difficult to replicate, they can still be vulnerable to hacking and spoofing attacks. 
-For example, an attacker could create a fake QR code that looks legitimate and trick a user into scanning it, thereby compromising their security.
+### Security Concerns:
+While QR codes are unique and difficult to replicate, they can still be vulnerable to hacking and spoofing attacks if they are not implemented keeping security in mind. 
+
+For example, an attacker could create a fake QR code that looks legitimate and trick a user into scanning it, thereby compromising their security. Similar to traditional phishing attacks, fraudsters can create fake websites or landing pages that display a QR code, often resembling those used by trusted organizations or services. Unsuspecting users who scan the code may unknowingly provide their login credentials or other sensitive information, which can be used for fraudulent activities.
+
+Another example may be where fraudsters can use QR codes as part of social engineering scams, they may send an email / text message or via social media apps like WhatsApp / Telegram to individuals, posing as a trusted organization or friend, and include a QR code. The message may claim that scanning the code is necessary to verify identity or unlock special offers. However, the code may actually lead to a fraudulent website or prompt the user to enter personal information that can be misused.
 
 ### Single Factor Authentication:
 While QR-based authentication can be used as a second factor of authentication, it is primarily a single factor authentication method. This means that it may not be sufficient for securing highly sensitive or critical resources and systems.
-
----
-# User journey
-
-<img src="/assets/images/posts/QR-auth-userflow.png" alt="User Journey" width="800px" height="100%">
 
 ---
 > In conclusion, QR-based authentication systems provide a secure, convenient solution for authentication and access control. With the widespread use of smartphones and the increasing need for secure authentication, QR-based authentication is becoming an increasingly popular choice for businesses and organizations of all sizes.
