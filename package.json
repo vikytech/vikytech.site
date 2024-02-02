@@ -1,7 +1,7 @@
 {
     "name": "vikytech",
-    "version": "1.1.0",
-    "description": "Vikytech",
+    "version": "1.2.0",
+    "description": "A micro tech blog with markdown support",
     "main": "index.md",
     "scripts": {
         "preinstall": "bundle install",
@@ -18,7 +18,7 @@
         "site",
         "jekyll"
     ],
-    "author": "VikyTech",
+    "author": "Vikhyath Choradia A.K.A VikyTech",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/vikytech/site/issues"
