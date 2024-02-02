@@ -112,24 +112,3 @@ pagination:
 
 gist:
   noscript: false
-
-jektify:
-  enable: true
-  open: true
-  toggle:
-    enable: true
-  spotify:
-    user: # "you_user_spotify"
-    text: "See me no Spotify"
-  sass:
-    jekyll: true
-    other:
-      dir: "_src/_sass"
-  title:
-    enable: false
-    text: "Music name"
-  description:
-    enable: false
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.

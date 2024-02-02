@@ -2,8 +2,6 @@
 layout: taglist
 order: 2
 title: Tags
-# Use icons of: https://fontawesome.com/icons
-# E.g: fa-briefcase
 icon: fa-tags
 menu:
   enable: true
