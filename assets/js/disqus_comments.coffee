@@ -13,7 +13,7 @@ disqus_config = ->
     d = document
     s = d.createElement 'script'
     s.src = 'https://{{ load_data.userdata.disqus.username }}.disqus.com/embed.js'
-    s.setAttribute 'data-timestamp', +new Date()
+    s.setAttribute 'data-bs-timestamp', +new Date()
     (d.head || d.body).appendChild(s)
     false
 
@@ -31,6 +31,6 @@ disqus_config = ->
 
 #   s.src = 'https://{{ load_data.userdata.disqus.username }}.disqus.com/embed.js';
 
-#   s.setAttribute('data-timestamp', +new Date());
+#   s.setAttribute('data-bs-timestamp', +new Date());
 #   (d.head || d.body).appendChild(s);
 # })();

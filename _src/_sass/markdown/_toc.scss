@@ -1,7 +1,7 @@
 #markdown-toc{
     margin-bottom: 100px;
     &:before{
-      content: attr(data-content);
+      content: attr(data-bs-content);
       font-weight: bold;
       font-size: 1.8rem;
     }

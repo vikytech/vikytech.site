@@ -5,7 +5,7 @@
 
 # Using Coffeescript
 $('#markdown-toc').hover ->
-    $(this).attr 'data-content', '{{ load_data.website.content.post.markdown_toc.indice.text }}'
+    $(this).attr 'data-bs-content', '{{ load_data.website.content.post.markdown_toc.indice.text }}'
 
 $("#markdown-toc a").click ->
     $('html, body').animate {scrollTop:$(this.hash).offset().top}, 500
@@ -29,7 +29,7 @@ $("#comments_in_post").click ->
 # Using Javascript
 # // Add indice name in Markdown Toc
 # $('#markdown-toc').hover(function(){
-#     $(this).attr('data-content', '{{ load_data.website.content.post.markdown_toc.indice.text }}');
+#     $(this).attr('data-bs-content', '{{ load_data.website.content.post.markdown_toc.indice.text }}');
 # });
 
 # $("#comments_in_post").click(function(event){

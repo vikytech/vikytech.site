@@ -67,7 +67,7 @@ layout: default
               </div>
 
               <!-- <input type="hidden" id="captchaResponse" name="g-recaptcha-response" /> -->
-              <div class="g-recaptcha" data-sitekey="6Lduk3gaAAAAAElhioCdtbkgtQ9VtTu4fzASu_JU"></div>
+              <div class="g-recaptcha" data-bs-sitekey="6Lduk3gaAAAAAElhioCdtbkgtQ9VtTu4fzASu_JU"></div>
 
               <div class="row">
                 <button type="submit"
