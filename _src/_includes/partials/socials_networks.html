@@ -8,7 +8,7 @@
           <h5 class="modal-title socials_network__title" id="socials_network__title">
               {{ load_data.userdata.socials.title }}
           </h5>
-          <button type="button" class="close socials_network__close" data-dismiss="modal" aria-label="Fechar">
+          <button type="button" class="close socials_network__close" data-bs-dismiss="modal" aria-label="Fechar">
               <i class="far fa-window-close"></i>
           </button>
         </div>
@@ -21,6 +21,7 @@
                   <div id="{{ item.id }}" class="col text-center socials_network__item">
                     <a class="socials_network__link" title="{{ item.title }}" href="{{ item.url }}" target="_blank">
                       <i class="fab {{ item.icon }} socials_network__icon" aria-hidden="true"></i>
+                      {{ item.title }}
                     </a>
                   </div>
                 {% endfor %}

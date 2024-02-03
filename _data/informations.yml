@@ -152,22 +152,18 @@ userdata:
         id: twitter
         icon: fa-twitter
         url: https://twitter.com/vikytech007
-
-      - title: Youtube
+      - title: YouTube
         id: youtube
         icon: fa-youtube
         url: https://youtube.com/vikytech
-
       - title: LinkedIn
         id: linkedin
         icon: fa-linkedin
         url: https://linkedin.com/vikytech
-
       - title: Facebook
         id: facebook
         icon: fa-facebook
         url: https://facebook.com/vikytech
-
       - title: Instagram
         id: instagram
         icon: fa-instagram

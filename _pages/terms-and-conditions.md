@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: fullscreen
 order: 5
 title: "Terms & Conditions"
 date: 2024-02-02 12:21:07 +0530
 sitemap:
   priority: 0.7
-  changefreq: 'monthly'
+  changefreq: 'yearly'
   lastmod: 2024-02-02 12:21:07 +0530
 icon: fa-file-contract
 menu:

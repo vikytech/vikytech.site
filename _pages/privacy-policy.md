@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: fullscreen
 order: 4
 title: "Privacy Policy"
 date: 2024-02-02 12:20:38 +0530
 sitemap:
   priority: 0.7
-  changefreq: 'monthly'
+  changefreq: 'yearly'
   lastmod: 2024-02-02 12:20:38 +0530
 icon: fa-shield-halved
 menu:
