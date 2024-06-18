@@ -3,6 +3,7 @@ ruby RUBY_VERSION
 
 gem "webrick"
 gem 'rake', '~> 13.0.3'
+gem 'rackup', '~> 2.1.0'
 gem 'jekyll', '~> 4.3', '>= 4.3.3'
 gem 'json', '~> 2.5.1'
 
